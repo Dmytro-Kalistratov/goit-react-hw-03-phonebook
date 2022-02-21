@@ -1,0 +1,53 @@
+.Form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  border: 2px solid #007899;
+  box-shadow: 15px 5px 15px rgba(0, 0, 0, 0.5);
+  background-color: #172c4e;
+}
+
+.Label {
+  display: flex;
+  color: #009597;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.Input {
+  color: #009497e7;
+  padding: 2px 6px;
+  margin-left: 10px;
+  font-size: 18px;
+
+  background-color: #2520a575;
+  border: 1px solid #110050;
+}
+
+.Button {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #0011a8;
+  background-color: #0098a3;
+  border: 2px solid #000e8b;
+  border-radius: 10px;
+  box-shadow: 4px 2px 2px #00000080;
+  transition: box-shadow 500ms ease-in-out;
+  cursor: pointer;
+}
+
+.Button:hover {
+  box-shadow: 5px 2px 2px #006466ff;
+}
+
+/* --skobeloff: #006466ff;
+--midnight-green-eagle-green: #065a60ff;
+--midnight-green-eagle-green-2: #0b525bff;
+--midnight-green-eagle-green-3: #144552ff;
+--charcoal: #1b3a4bff;
+--prussian-blue: #212f45ff;
+--space-cadet: #272640ff;
+--dark-purple: #312244ff;
+--dark-purple-2: #3e1f47ff;
+--palatinate-purple: #4d194dff; */

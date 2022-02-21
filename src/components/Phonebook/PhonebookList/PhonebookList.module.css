@@ -1,0 +1,32 @@
+.List {
+  padding: 0;
+  margin: 0;
+}
+
+.List__Item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  border: 2px solid #080072;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.Button {
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #0011a8;
+  background-color: #0098a3;
+  border: 1px solid #000e8b;
+  border-radius: 10px;
+  box-shadow: 4px 2px 2px #00000080;
+  transition: box-shadow 500ms ease-in-out;
+  cursor: pointer;
+}
+
+.Button:hover {
+  box-shadow: 5px 2px 2px #080072;
+}
