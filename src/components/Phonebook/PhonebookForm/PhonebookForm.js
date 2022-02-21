@@ -44,6 +44,7 @@ class PhonebookForm extends Component {
             type="text"
             name="name"
             value={this.state.name}
+            mask="000-0-000"
             placeholder="Enter demon name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import PhonebookListItem from './PhonebookListItem';
+import PhonebookListItem from '../PhonebookListItem';
 import styles from './PhonebookList.module.css';
 
 const PhonebookList = props => {

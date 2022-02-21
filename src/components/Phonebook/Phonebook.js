@@ -20,7 +20,8 @@ class Phonebook extends Component {
         name: 'Pandemonica the Tired Demon',
         number: '000-0-000',
       },
-      { id: 'id-4', name: 'The Helltaker', number: '969-0-001' },
+      { id: 'id-4', name: 'Malina the Sour Demon', number: '333-9-333' },
+      { id: 'id-5', name: 'The Helltaker', number: '969-0-001' },
     ],
     initialFilter: '',
   };
@@ -40,6 +41,25 @@ class Phonebook extends Component {
     contacts: this.props.initialContacts,
     filter: this.props.initialFilter,
   };
+
+  componentDidMount() {
+    const stringContacts = localStorage.getItem('Contacts');
+    const parsedContacts = JSON.parse(stringContacts);
+
+    if (parsedContacts) {
+      this.setState({ contacts: parsedContacts });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.contacts !== prevState.contacts) {
+      localStorage.setItem('Contacts', JSON.stringify(this.state.contacts));
+    }
+  }
+
+  componentWillUnmount() {
+    console.log('Wryyyy');
+  }
 
   onformSubmit = data => {
     const generateContactsId = nanoid();
@@ -92,11 +112,7 @@ class Phonebook extends Component {
     return (
       <>
         <Section title="The Hell Phonebook">
-          <PhonebookForm
-            initialInputName="Malina the Sour Demon"
-            initialInputNumber="333-9-333"
-            onSubmit={this.onformSubmit}
-          />
+          <PhonebookForm onSubmit={this.onformSubmit} />
         </Section>
         <Section title="Your Demon List">
           <PhonebookFilter value={filter} onChange={this.onFilterChange} />
